@@ -16,7 +16,12 @@ class PostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Post, PostAdmin)
-admin.site.register(SubPost)
+
+class SubPostAdmin(admin.ModelAdmin):
+    list_display = ('headline', 'post')
+    ordering = ['post']
+
+admin.site.register(SubPost, SubPostAdmin)
 
 
 

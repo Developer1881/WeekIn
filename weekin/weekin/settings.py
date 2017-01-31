@@ -25,7 +25,7 @@ SECRET_KEY = '=rz*v2h(ef@+a*33t#ht_v)&suok$(q%3f-u2g8ki#@h7)!27a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['developer1881.pythonanywhere.com',  '127.0.0.1']
+ALLOWED_HOSTS = ['developer1881.pythonanywhere.com',  '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'weekin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'weekin',
+        'USER': 'weekin',
+        'PASSWORD': 'bR25O9kOGvWwArSw',
+        'HOST': '95.46.107.204',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
@@ -118,4 +122,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+
+
+
+

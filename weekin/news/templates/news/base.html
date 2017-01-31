@@ -1,51 +1,52 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
 
+{% load staticfiles %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
 <head>
-     <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+         <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href= "{% static "css/bootstrap.css" %}" rel="stylesheet">
     <link href= "{% static "css/base.css" %}" rel="stylesheet">
-
+    <script type="text/javascript" src= "{% static "js/jquery-2.1.4.min.js" %}"></script>
+    <script type="text/javascript" src= "{% static "js/handlebars-v3.0.3.js" %}"></script>
 
 </head>
+
 <body role="document">
 
   <div class="container">
-    <div class="page-header">
 
       <div class="row"> <!--first row of the header -->
            <a href="{% url "news:post_list" %}">
-        <img  src="{% static "icons/logo.png" %}" align="middle" style="width:150px; margin-left:405px">
+         <img src="{% static "icons/logo.png" %}" style="width:150px; margin-left:405px; padding-top:15px;">
            </a>
-         <img class="button" src="{% static "icons/account.png" %}" style="float:right; ">
-         <img class="button" src="{% static "icons/language.png" %}" style="float:right; margin:10px;">
-      </div>
+           </div>
      <div class="row" style="margin-top:30px;"> <!--second row of the header -->
       <div class="col-xs-4 col-sm-4 col-md-4" >
-        <p style="font-family:serif; font-style:normal; font-size:20px;"> All weekly news in 10 minutes </p>
+        <p style="padding-bottom:0px; font-family:serif;"> All weekly news in 10 minutes </p>
       </div>
-      <div class="col-xs-4 col-sm-4 col-md-4"  >
-        <img  src="{% static "icons/weeknews.png" %}" style="width:49%">
-        <img  src="{% static "icons/monthnews.png" %}" style="width:49%">
-      </div>
-<div  class="col-xs-1 col-sm-1 col-md-1">
-</div>
+        <div class="btn-group col-xs-4 col-sm-4 col-md-4" role="group" align=center >
+          <button type="button" class="btn btn-secondary"> Weekly news</button>
+          <button type="button" class="btn btn-secondary"> Monthly news</button>
+        </div>
+
+        <div class="col-xs-1 col-sm-1 col-md-1">  </div>
       <div class="col-xs-2 col-sm-2 col-md-2" >
         <label class="switch">
-  <input type="checkbox">
-  <div class="slider round"></div>
-</label>
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
       </div>
 
       <div  class="col-xs-1 col-sm-1 col-md-1">
          <img class="button" src="{% static "icons/search.png" %}">
+         <span class="icon icon-search" title="search"></span>
       </div>
      </div>
-
-    </div>
   </div>
 
 
@@ -55,3 +56,11 @@
 
 
 </body>
+
+</html>
+
+
+
+
+
+

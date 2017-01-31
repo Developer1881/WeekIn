@@ -55,6 +55,8 @@ class SubPost(models.Model):
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='images/%Y/%m/%d',
+                              blank=True)
 
     def __str__(self):
        return self.headline
