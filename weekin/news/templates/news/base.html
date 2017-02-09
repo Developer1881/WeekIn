@@ -8,11 +8,17 @@
 <head>
 
          <title>{% block title %}{% endblock %}</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href= "{% static "css/bootstrap.css" %}" rel="stylesheet">
-    <link href= "{% static "css/base.css" %}" rel="stylesheet">
+
+    <link href= "{% static "css/base.css" %}" rel="stylesheet" type="text/css">
     <script type="text/javascript" src= "{% static "js/jquery-2.1.4.min.js" %}"></script>
     <script type="text/javascript" src= "{% static "js/handlebars-v3.0.3.js" %}"></script>
+  <script>
+function goBack() {
+    window.history.back()
+}
+</script>
 
 </head>
 
