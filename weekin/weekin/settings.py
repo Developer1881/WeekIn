@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'weekin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'weekin',
-        'USER': 'weekin',
-        'PASSWORD': 'bR25O9kOGvWwArSw',
-        'HOST': '95.46.107.204',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'NAME': 'xxx',
+        'USER': 'xxx',
+        'PASSWORD': 'xxx',
+        'HOST': 'xxx',   # Or an IP Address that your DB is hosted on
+        'PORT': 'xxx',
     }
 }
 
