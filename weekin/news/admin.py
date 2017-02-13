@@ -18,8 +18,10 @@ class PostAdmin(admin.ModelAdmin):
 admin.site.register(Post, PostAdmin)
 
 class SubPostAdmin(admin.ModelAdmin):
-    list_display = ('headline', 'post')
-    ordering = ['post']
+    list_display = ('headline', 'post', 'get_week_end')
+    list_filter = ('post__week_end', 'post', 'post__author',)
+    search_fields = ('headline', 'post__week_end',)
+    ordering = ['-post__week_end', 'post']
 
 admin.site.register(SubPost, SubPostAdmin)
 

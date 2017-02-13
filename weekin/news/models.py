@@ -61,8 +61,11 @@ class SubPost(models.Model):
     def __str__(self):
        return self.headline
 
+    def get_week_end(self):
+        return self.post.week_end
+
     class Meta:
-         ordering = ('headline',)
+         ordering = ('created',)
 
 
 

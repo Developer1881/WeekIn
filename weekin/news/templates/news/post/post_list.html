@@ -14,7 +14,7 @@
              <div class="card">
         <div class="card-block news">
         <a href="{{ post.get_absolute_url }}" style="text-decoration:none; color:black;">
-        <h3 align="center" > {{ post.week_start }} : {{ post.week_end }} </h3>
+        <h3 align="center" > {{ post.week_start | date:"d.m.y" }} - {{ post.week_end | date:"d.m.y" }} </h3>
 
               {% for subpost in post.subpost_set.all %}
                   <h4 > {{ subpost.headline }}</h4>

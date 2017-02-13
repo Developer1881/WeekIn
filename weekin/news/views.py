@@ -4,7 +4,7 @@ from .models import Post
 
 
 def post_list(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(status = 'published')
     return render(request, 'news/post/post_list.html', {'posts': posts})
 
 def post_detail(request, year, month, day, post):
