@@ -17,7 +17,11 @@
         <h3 align="center" > {{ post.week_start | date:"d.m.y" }} - {{ post.week_end | date:"d.m.y" }} </h3>
 
               {% for subpost in post.subpost_set.all %}
-                  <h4 > {{ subpost.headline }}</h4>
+
+               {% if subpost.hiden == False %}
+                    <h4 > {{ subpost.headline }}</h4>
+                  {% endif %}
+
               {% endfor %}
         </a>
               </div>

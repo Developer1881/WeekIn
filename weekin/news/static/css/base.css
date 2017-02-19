@@ -1,11 +1,9 @@
 a{
-  text-decoration: none;
   color:black;
   width:450px;
   height: auto;
 }
-a.hover{
-  text-decoration: none;
+a:hover{
   color:black;
   width:450px;
   height: auto;
@@ -13,8 +11,9 @@ a.hover{
 div.container{
     width:960px;
 }
+
 body {
-    font-family:serif;
+    font-family:"Times", serif;
     font-style:normal;
     font-size:20px;
 }
@@ -25,72 +24,157 @@ body {
     border: 0px;
 }
 
-.card-header {
-    background-color: #419BF9;
-}
-
 .news{
-    font-family: serif;
-    box-shadow: 0  0 5px #C6C6C6;
+    box-shadow: 2px 2px 8px  #C6C6C6;
     border-style: solid;
+    border-radius:2px;
     border-width: 1px;
-    border-color: #419BF9;
+    border-color: #9B9B9B;
     padding: 10px 20px 10px 20px;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
     margin-bottom: 10px;
 }
-
 .news:hover{
-    font-family: serif;
-    box-shadow: 0 0 5px #C6C6C6;
+    box-shadow: 2px 2px 8px #C6C6C6;
     border-style: solid;
+    border-radius:2px;
     border-width: 1px;
-    border-color: #419BF9;
-    background: rgba(65, 155, 249, 0.2);
+    border-color: #9B9B9B;
+    background: #E4F1FF;
     padding: 10px 20px 10px 20px;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
     margin-bottom: 10px;
 }
 
-h4{
+h4,h2{
+    font-weight: bold;
     padding:5px;
     text-decoration: none;
 }
 h4.hover{
+    font-weight: bold;
     padding:5px;
     text-decoration: none;
 }
+
+.notbold{
+    font-weight: normal;
+}
 h3{
-    font-family: serif;
+    font-weight: bold;
     padding-bottom: 20px;
     padding-top: 15px;
     text-decoration: none;
 }
 h3.hover{
-    font-family: serif;
+    font-weight: bold;
     padding-bottom: 20px;
     padding-top: 15px;
     text-decoration: none;
 }
-.leftside{
-    text-align:left;
-    padding: 0px;
-    font-family:serif;
-
-}
-
-.rigthside{
-    position:fixed;
-    right:0px;
-}
-
-.centered{
-    text-align: center;
-    width:100%;
-    height:35px;
-    margin-left: 2%;
-}
 
 .card-text{
     text-align: justify;
+}
+
+.container.footer{
+    width:100%;
+    background-color: #EEEEEE;
+    padding-bottom:;: 60px;
+    padding-top:30px;
+    margin-top:40px;
+}
+
+.active{
+    background-color: #4398F8;
+}
+
+.btn.btn-secondary{
+    font-family: "Times";
+    font-size: 20px;
+    line-height: 18px;
+    border-style:solid;
+    border-width: 1px;
+    border-color:black;
+    border-radius: 8px ;
+    height:35px;
+    background-color: #E1E5E8;
+ }
+.btn.btn-secondary:hover{
+    font-family: "Times";
+    font-size: 20px;
+    line-height: 18px;
+    border-style:solid;
+    border-width: 1px;
+    border-color:black;
+    border-radius: 8px ;
+    height:35px;
+    background-color: #86B3E7;
+ }
+
+
+.language{
+    font-family: "Times";
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color:black;
+    border-radius: 0px;
+    line-height: 16px;
+    padding: 2px;
+    background-color: #E1E5E8;
+
+}
+
+
+
+.onoffswitch {
+    position: relative; width: 70px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #000000; border-radius: 8px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 27px; padding: 0; line-height: 27px;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+
+    padding-left: 5px;
+    background-color: #D8D8D8; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+
+    padding-right: 5px;
+    background-color: #D8D8D8; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+
+    display: block; width: 39px; margin: 0px;
+    background: #4398F8;
+    position: absolute; top: 1px; bottom: 1px;
+    right: 30px;
+    border: 1px solid #000000; border-radius: 8px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 1px;
+    background-color: #4398F8;
 }

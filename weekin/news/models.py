@@ -3,7 +3,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 #from django_countries.fields import CountryField
 from django.core.urlresolvers import reverse
-
+from taggit.managers import TaggableManager
+from django.db.models.functions import Length
 
 
 class PublishedManager(models.Manager):
@@ -57,6 +58,8 @@ class SubPost(models.Model):
     updated = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='images/%Y/%m/%d',
                               blank=True)
+    tags = TaggableManager(blank=True)
+    hiden = models.BooleanField(default=False)
 
     def __str__(self):
        return self.headline

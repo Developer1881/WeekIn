@@ -28,7 +28,15 @@
         {% endfor %}
 
     </div>
+
+  <p class="tags">  {% for subpost in post.subpost_set.all %} {{ subpost.tags.all|join:", " }} {% endfor %}</p>
+
   </div>
+
+
+
+
+
 {% endblock %}
 
 

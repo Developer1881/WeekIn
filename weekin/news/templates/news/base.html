@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <link href= "{% static "css/base.css" %}" rel="stylesheet" type="text/css">
+    <link href= "{% static "css/themify-icons.css" %}" rel="stylesheet" type="text/css">
+
     <script type="text/javascript" src= "{% static "js/jquery-2.1.4.min.js" %}"></script>
     <script type="text/javascript" src= "{% static "js/handlebars-v3.0.3.js" %}"></script>
   <script>
@@ -26,40 +28,99 @@ function goBack() {
 
   <div class="container">
 
-      <div class="row"> <!--first row of the header -->
+      <div class="row" style="padding-bottom:30px;"> <!--first row of the header -->
+          <div class="col-xs-5 col-sm-5 col-md-5" > </div>
+          <div class="col-xs-2 col-sm-2 col-md-2" >
            <a href="{% url "news:post_list" %}">
-         <img src="{% static "icons/logo.png" %}" style="width:150px; margin-left:405px; padding-top:15px;">
+             <img src="{% static "icons/logo.png" %}" style="width:160px; padding-top:35px;">
            </a>
-           </div>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2" > </div>
+          <div class="col-xs-1 col-sm-1 col-md-1" style="margin-top:36px;padding-left:60px; ">
+          <span class="ti-location-pin"  style="font-size:33px; font-weight: bold;"></span>
+          </div>
+          <div class="col-xs-1 col-sm-1 col-md-1" style="margin-top:38px; padding-left:20px; " >
+          <button type="button" class="language"> ENG</button>
+          </div>
+          <div class="col-xs-1 col-sm-1 col-md-1" style=" margin-top:30px;">
+            <a href="...">
+             <img src="{% static "icons/account.png" %}" style="width:44px;">
+           </a>
+          </div>
+
+      </div>
+
      <div class="row" style="margin-top:30px;"> <!--second row of the header -->
       <div class="col-xs-4 col-sm-4 col-md-4" >
         <p style="padding-bottom:0px; font-family:serif;"> All weekly news in 10 minutes </p>
       </div>
-        <div class="btn-group col-xs-4 col-sm-4 col-md-4" role="group" align=center >
-          <button type="button" class="btn btn-secondary"> Weekly news</button>
+        <div class="btn-group col-xs-4 col-sm-4 col-md-4" role="group" align="center">
+          <button type="button" class=" active btn btn-secondary " style="background-color: #4398F8;"> Weekly news</button>
           <button type="button" class="btn btn-secondary"> Monthly news</button>
         </div>
 
-        <div class="col-xs-1 col-sm-1 col-md-1">  </div>
-      <div class="col-xs-2 col-sm-2 col-md-2" >
-        <label class="switch">
-          <input type="checkbox">
-          <div class="slider round"></div>
-        </label>
+      <div class="col-xs-1 col-sm-1 col-md-1" style="padding-left: 63px;" >
+          <span class="ti-text" aria-hidden="true" style="font-size:29px;"></span>
+      </div>
+         <div class="col-xs-1 col-sm-1 col-md-1"  >
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+             </div>
+         <div class="col-xs-1 col-sm-1 col-md-1"  >
+              <span class="ti-gallery" aria-hidden="true" style="font-size:30px;"></span>
       </div>
 
-      <div  class="col-xs-1 col-sm-1 col-md-1">
-         <img class="button" src="{% static "icons/search.png" %}">
-         <span class="icon icon-search" title="search"></span>
+      <div  class="col-xs-1 col-sm-1 col-md-1" style="padding-left: 30px;">
+         <span class="ti-search" style="font-size:29px; font-weight: bolder; "></span>
       </div>
      </div>
   </div>
+
+
 
 
  {% block content %}
 
  {% endblock %}
 
+ 
+ <div class="container footer">
+        <div class="row">
+            <div class="col-md-2"></div>
+           <div class="col-md-2">
+               <a href=""> <p style="font-weight:bold;"> Company  </p> </a>
+               <a href=""> <p> About us </p> </a>
+               <a href=""> <p> Contacts </p> </a>
+           </div>
+
+            <div class="col-md-2">
+                   <a href=""> <p style="font-weight:bold;"> Account  </p> </a>
+                   <a href=""> <p> Join us </p> </a>
+                   <a href=""> <p> Log in </p> </a>
+            </div>
+
+            <div class="col-md-2">
+                   <a href=""> <p style="font-weight:bold;"> Volunteering  </p> </a>
+                   <a href=""> <p> About </p> </a>
+                   <a href=""> <p> Become a volunteer </p> </a>
+            </div>
+           <div class="col-md-1"></div>
+            <div class="col-md-3" >
+                <br>
+                <br>
+                <br>
+                <p>©2017 </p>
+            </div>
+
+        </div>
+    </div>
+
+ 
 
 </body>
 
